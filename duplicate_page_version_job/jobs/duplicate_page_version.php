@@ -52,9 +52,14 @@ class DuplicatePageVersion extends QueueableJob
             $comments = 'Duplicate Page Version Job';
             $comments = is_string($comments) ? trim($comments) : '';
             $c = $page;
+            if ($c->isPageDraft()) {
+                return;
+            }
+
             $cDescription = $page->getCollectionDescription();
             $nc = $page->cloneVersion(t('Duplicate Page Version Job: %s', $page->getVersionID()));
 
+            /*
             $randomString = "XCiLbmyWGnxVqwF2QZyHX1zZR3RUGdvLpruDKiy8dSTG8pP7eWMZXYlLTHD84XeN";
 
             $u->loadCollectionEdit($page);
@@ -63,6 +68,7 @@ class DuplicatePageVersion extends QueueableJob
             $data['cDescription'] = $cDescription . "+" . $randomString;
             $nvc->update($data);
             $u->unloadCollectionEdit($page);
+            */
 
             $u->loadCollectionEdit($page);
             $nvc = $page->getVersionToModify();
@@ -84,11 +90,7 @@ class DuplicatePageVersion extends QueueableJob
                 $pkr->setRequesterUserID($u->getUserID());
                 $u->unloadCollectionEdit($c);
 
-                if ($c->isPageDraft()) {
-                    return;
-                } else {
-                    $pkr->trigger();
-                }
+                $pkr->trigger();
 
                 $ov = CollectionVersion::get($c, 'ACTIVE');
                 if (is_object($ov)) {
