@@ -1,6 +1,6 @@
 # Duplicate Page Version Job - duplicate all pages of your concrete5 site
 
-This is very simple add-on to duplicate page versions of all pages.
+This is very simple add-on to duplicate page versions of all pages of concrete5 CMS. I'm not sure what you can do with this job.... but it should come in handy.
 
 When you install this add-on, it will add a very simple but **dangerious** job to erase all draft pages in your site.
 
@@ -29,7 +29,7 @@ When you install this add-on, it will add a very simple but **dangerious** job t
 
 This project is on GitHub. This package is released under MIT License.
 
-https://github.com/katzueno/addon_erase_draftpage_job
+https://github.com/katzueno/addon_duplicate_pageversion
 
 
 ## Credit
@@ -68,7 +68,7 @@ https://github.com/katzueno/addon_erase_draftpage_job
 
 このパッケージは GitHub でも公開しています。ライセンスは MIT です。
 
-https://github.com/katzueno/addon_erase_draftpage_job
+https://github.com/katzueno/addon_duplicate_pageversion
 
 ## クレジット
 
