@@ -4,6 +4,15 @@ This is very simple add-on to duplicate page versions of all pages of concrete5 
 
 When you install this add-on, it will add a very simple but **dangerious** job to erase all draft pages in your site.
 
+日本語は下にスクロールしてください。
+
+## Upgraded concrete5 V8 site caused duplicated results of topic filter
+
+This add-on was originally build to fix the V8 error.
+https://github.com/concrete5/concrete5/issues/4907
+
+And it hasn't been fixed, yet.
+
 ## How to Install
 
 1. Download zip files from GitHub, or the check it out from Marketplace. (in the future).
@@ -42,6 +51,13 @@ https://github.com/katzueno/addon_duplicate_pageversion
 どんな用途に使えるかわからない、全てのページバージョンのバージョンを複製するジョブです。
 
 この自動実行ジョブは、そんな方に向けて、一気に下書きページを削除してしまう、楽ちんかつ**危険な**ジョブパッケージです。
+
+## 5.7.x から V8 にアップグレードしたサイトのトピックがおかしくなってしまっているエラー (Upgraded concrete5 V8 site caused duplicated results of topic filter)
+
+このアドオンは、下記のエラーを直すことが出来ないかなと思い、作成しました。
+https://github.com/concrete5/concrete5/issues/4907
+
+が、エラーは未だ直っていません。
 
 ## インストール方法
 
